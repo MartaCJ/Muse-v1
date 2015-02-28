@@ -1,18 +1,51 @@
-<ion-view view-title="Browse">
+<ion-view view-title="Sube">
   <ion-content>
     <h1>Subir imágenes</h1>
 	
-	<div class="list">
+	  <form ng-submit="doAdd()">
+      <div class="list">
+        <label class="item item-divider"><b>Nueva Categoria</b></label>
+        <label class="item item-input">
+          <span class="input-label">Nombre</span>
+          <input type="text" ng-model="addCategory.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Descripcion</span>
+          <input type="text" ng-model="addCategory.description">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Miniatura</span>
+          <input type="text" ng-model="addCategory.thumb">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="insert(addCategory)">Añadir categoria</button>
+        </label>
+      </div>
+    </form>
+	
+		<div class="list">
 
-  <div class="item item-input-inset">
-    <label class="item-input-wrapper">
-      <input type="text" placeholder="imagen">
-    </label>
-    <button class="button button-small">
-      Subir
-    </button>
-  </div>
+		<div class="item item-input-inset">
+			<label class="item-input-wrapper">
+			  <input type="text" placeholder="imagen url">
+			</label>
+			<button class="button button-small button-positive">
+			  Subir
+			</button>
+		</div>
 
-</div>
+	</div>
+	
+	 <center>
+	    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+	    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+	    <button id="login-button" class="button button-block button-positive" ng-click="takePicture()">
+		Take Photo
+		</button>
+    </center>
+	<!--Div vacío para que el footer no tapara el botón-->
+	<div class="bar">
+	</div>
+
   </ion-content>
 </ion-view>

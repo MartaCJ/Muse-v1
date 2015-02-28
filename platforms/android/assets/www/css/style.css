@@ -4,3 +4,6 @@ body {
   text-align: center;
 }
 
+ion-list{
+	text-align:left;
+}

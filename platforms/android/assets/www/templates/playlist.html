@@ -1,5 +1,15 @@
-<ion-view view-title="Themes">
+<ion-view view-title="Temas">
   <ion-content>
-    <h1>Themes</h1>
+    <h1>Temas</h1>
+	 <div class="card">
+    <div class="list">
+    <ion-item class="item item-thumbnail-left" ng-repeat="items in Item" href="#/app/images/{{items.id}}">
+      <img src="img/icon.png">
+      <h2>Imagen</h2>
+      {{items.name}}
+    </ion-item>
+    </div>
+  </div>
+	
   </ion-content>
 </ion-view>

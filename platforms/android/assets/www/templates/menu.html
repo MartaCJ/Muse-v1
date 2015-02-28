@@ -18,21 +18,22 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-	  <ion-item nav-clear menu-close ion-android-home icon-left href="#/app/home">
-          Home
+		<ion-item nav-clear menu-close href="#/app/home">
+			<i class="icon ion-home"></i>Home
         </ion-item>
-        <ion-item nav-clear menu-close ion-android-person icon-left ng-click="login()">
-          Login
+        <ion-item nav-clear menu-close ng-click="login()">
+			<i class="icon ion-person"></i>Login
         </ion-item>
-        <ion-item nav-clear menu-close ion-android-search icon-left href="#/app/search">
-          Search
+		        <ion-item nav-clear menu-close href="#/app/browse">
+			<i class="icon ion-camera"></i>Sube
         </ion-item>
-        <ion-item nav-clear menu-close ion-android-camera icon-left href="#/app/browse">
-          Browse
+        <ion-item nav-clear menu-close href="#/app/playlists">
+			<i class="icon ion-star"></i>Categorias
         </ion-item>
-        <ion-item nav-clear menu-close ion-android-color-palette icon-left href="#/app/playlists">
-          Themes
+        <ion-item nav-clear menu-close href="#/app/search">
+			<i class="icon ion-search"></i>Busca
         </ion-item>
+
       </ion-list>
     </ion-content>
   </ion-side-menu>

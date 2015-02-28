@@ -1,0 +1,19 @@
+<ion-view style="background-color: #E0E0E0" view-title="Images">
+  <ion-content>
+    <div class="list card" ng-repeat="imagenes in Images">
+      <div class="item item-avatar">
+        <img src="http://www.planificaciondeportiva.es/{{ imagenes.uri }}">
+        <h2>{{imagenes.label}}</h2>
+        <p>{{imagenes.name}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="http://www.planificaciondeportiva.es/{{ imagenes.uri }}">
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <p>{{imagenes.content}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
